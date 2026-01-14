@@ -39,7 +39,6 @@ with col_left:
         "EQUIPMENT": equipment_filled,
         "ISSUER NAME": st.session_state.get("issuer_name", "").strip() != "",
         "RECEIVER NAME": st.session_state.get("receiver_name", "").strip() != "",
-        "DATE OF RETURN": st.session_state.get("return_date", None) is not None,
     }
 
     for label, completed in checklist_items.items():
