@@ -469,19 +469,7 @@ def build_equipment_issue_pdf() -> bytes:
 
     _txt(c, mid + 6, y + 8, "RECEIVER SIGN", size=7, bold=True)
 
-    # --- Blue section: RETURNS DETAIL ---
-    y = y - bar_h
-    _rect(c, x0, y, form_w, bar_h, fill=BLUE, stroke=1)
-    _center(c, x0, y + 4, form_w, "RETURNS DETAIL", size=8, bold=True)
-
-    row_h = 20
-    y = y - row_h
-    _rect(c, x0, y, form_w, row_h, fill=None, stroke=1)
-
-    label_w = form_w * 0.55
-    _vline(c, x0 + label_w, y, y + row_h)
-    _center(c, x0, y + 6, label_w, "DATE OF RETURN", size=7, bold=True)
-    _txt(c, x0 + label_w + 6, y + 6, _fmt_date(st.session_state.get("return_date", "")), size=8)
+    # (RETURNS DETAIL date removed — the UI no longer captures a return date)
 
     # --- Blue section: RETURNED EQUIPMENT ---
     y = y - bar_h
