@@ -39,7 +39,7 @@ def render_passwords_form():
         )
         st.selectbox(
             "Microsoft 365 domain",
-            ["statom.co.uk", "demoforce.co.uk", "st-mep.co.uk"],
+            ["statom.co.uk", "demoforce.co.uk", "st-mep.co.uk", "frankifoundations.co.uk", "apexcoreengineering.co.uk"],
             key="m365_domain",
         )
         st.text_input("Microsoft 365 password", key="m365_password", type="password")
